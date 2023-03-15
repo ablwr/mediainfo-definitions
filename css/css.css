@@ -1,0 +1,98 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: monospace;
+    background-color: #d8e8d1;
+    background: linear-gradient(217deg, #d8e8d1, #e5ede1, #ebf5eb 70.71%), linear-gradient(127deg, #d8e8d1, #ebf5eb, #e5ede1 70.71%), linear-gradient(336deg, #d8e8d1, #ebf5eb, #e5ede1 70.71%) no-repeat;
+    color: #313b31;
+    display: grid;
+    align-content: baseline;
+    justify-content: center;
+}
+
+footer {
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+tagline {
+    display: grid;
+    grid-template-columns: 2rem auto;
+    padding-bottom: 1.5rem;
+}
+
+tagline>svg {
+    padding-top: 1.5rem;
+}
+
+tagline>div {
+    max-width: 30rem;
+    padding: 0;
+    margin: 0;
+}
+
+#status {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+#searchBox {
+    width: 70%;
+}
+
+#search label {
+    font-size: 0.5rem;
+    display: flex;
+}
+
+#search input {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#submit {
+    background-color: #ccf2bd;
+    border: 1px solid black;
+}
+
+#clear {
+    background-color: #f0dfec;
+    border: 1px solid black;
+}
+
+thead {
+    text-align: justify;
+    display: none;
+}
+
+thead>tr,
+tbody>tr {
+    display: grid;
+    grid-template-columns: 12% 25% auto;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 0.5rem;
+}
+
+tbody>tr>td:first-child {
+    width: fit-content;
+    overflow-wrap: anywhere;
+}
+
+tbody>tr>td:nth-child(2) {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+tbody>tr>td:nth-child(3) {
+    width: fit-content;
+}
