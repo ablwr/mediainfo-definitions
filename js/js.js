@@ -1,10 +1,10 @@
-const audio = "../data/Audio.csv";
-const general = "../data/General.csv";
-const image = "../data/Image.csv";
-const menu = "../data/Menu.csv";
-const other = "../data/Other.csv";
-const text = "../data/Text.csv";
-const video = "../data/Video.csv";
+const audio = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Audio.csv";
+const general = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/General.csv";
+const image = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Image.csv";
+const menu = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Menu.csv";
+const other = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Other.csv";
+const text = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Text.csv";
+const video = "https://raw.githubusercontent.com/MediaArea/MediaInfoLib/master/Source/Resource/Text/Stream/Video.csv";
 
 const files = [audio, general, image, menu, other, text, video];
 
@@ -19,9 +19,7 @@ files.forEach((i) => {
       console.log("Parsing error");
     },
     complete: function (data) {
-      let categoryName = i.toString().slice(8, -4);
-    //   allParams.push({ categoryName: categoryName, data: {fieldName: data.data[0][0], data: data.data[0][6]} });
-
+      let categoryName = i.toString().slice(92, -4);
       allParams.push({ categoryName: categoryName, data: data });
     },
   });
