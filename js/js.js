@@ -10,6 +10,12 @@ const files = [audio, general, image, menu, other, text, video];
 
 let allParams = [];
 
+const input = document.querySelector("#searchBox");
+const submit = document.getElementById('submit');
+const results = document.querySelector("#results")
+const statusNumber = document.querySelector("#status")
+let thead = document.getElementById("head")
+
 files.forEach((i) => {
   Papa.parse(i, {
     download: true,
@@ -17,6 +23,9 @@ files.forEach((i) => {
     delimiter: ";",
     error: function () {
       console.log("Parsing error");
+      let sorry = document.createElement("h2")
+      results?.appendChild(sorry)
+      sorry.innerText = "Sorry, there was a problem loading the data! Site's broken for today"
     },
     complete: function (data) {
       let categoryName = i.toString().slice(92, -4);
@@ -26,11 +35,6 @@ files.forEach((i) => {
 });
 
 
-const input = document.querySelector("#searchBox");
-const submit = document.getElementById('submit');
-const results = document.querySelector("#results")
-const statusNumber = document.querySelector("#status")
-let thead = document.getElementById("head")
 
 input?.addEventListener("keyup", function (e) {
     e.preventDefault();
