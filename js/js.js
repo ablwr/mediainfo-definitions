@@ -80,6 +80,9 @@ function getParameters() {
             }
         });
     });
-    thead.style.display = "grid"
-    statusNumber.innerText = `${document.getElementsByTagName("tr").length - 1} results found`;
+    let trLength = document.getElementsByTagName("tr").length - 1
+    if (trLength > 1) {
+        thead.style.display = "grid"
+    }
+    statusNumber.innerText = `${trLength} results found`;
 }
