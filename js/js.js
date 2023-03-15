@@ -63,6 +63,7 @@ function clearAll() {
 
 function getParameters() {
     document.getElementById('results').innerHTML = ""
+    thead.style.display = "none"
     allParams.forEach(streamType => {
         streamType.data.data.filter(d => {
             if (d[0].toLowerCase().startsWith(input.value.toLowerCase())) {
