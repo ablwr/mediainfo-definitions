@@ -47,7 +47,7 @@ tagline>div {
 }
 
 #searchBox {
-    width: 70%;
+    width: 60%;
 }
 
 #search label {
@@ -58,6 +58,13 @@ tagline>div {
 #search input {
     padding: 1rem;
     font-size: 1rem;
+}
+
+#category {
+    background-color: #f3fdf0;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid black;
 }
 
 #submit {
@@ -81,6 +88,7 @@ tbody>tr {
     grid-template-columns: 12% 25% auto;
     border-bottom: 1px solid darkgray;
     padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 tbody>tr>td:first-child {
@@ -95,4 +103,8 @@ tbody>tr>td:nth-child(2) {
 
 tbody>tr>td:nth-child(3) {
     width: fit-content;
+}
+
+tbody>tr:nth-child(odd) {
+    background-color: rgba(0, 100, 0, 0.1);
 }

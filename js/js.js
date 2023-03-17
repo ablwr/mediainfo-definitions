@@ -10,11 +10,12 @@ const files = [audio, general, image, menu, other, text, video];
 
 let allParams = [];
 
-const input = document.querySelector("#searchBox");
-const submit = document.getElementById('submit');
+const input = document.querySelector("#searchBox")
+const submit = document.getElementById('submit')
 const results = document.querySelector("#results")
 const statusNumber = document.querySelector("#status")
-let thead = document.getElementById("head")
+const category = document.querySelector("#category")
+const thead = document.getElementById("head")
 
 files.forEach((i) => {
   Papa.parse(i, {
@@ -33,8 +34,6 @@ files.forEach((i) => {
     },
   });
 });
-
-
 
 input?.addEventListener("keyup", function (e) {
     e.preventDefault();
@@ -65,21 +64,23 @@ function getParameters() {
     document.getElementById('results').innerHTML = ""
     thead.style.display = "none"
     allParams.forEach(streamType => {
-        streamType.data.data.filter(d => {
-            if (d[0].toLowerCase().startsWith(input.value.toLowerCase())) {
-                let tr = document.createElement("tr");
-                results?.appendChild(tr);
-                let td2 = document.createElement("td");
-                let td1 = document.createElement("td");
-                let td3 = document.createElement("td");
-                td1.innerText = streamType.categoryName;
-                td2.innerText = d[0];
-                td3.innerText = d[6];
-                tr.appendChild(td1);
-                tr.appendChild(td2);
-                tr.appendChild(td3);
-            }
-        });
+        if (streamType.categoryName.toLowerCase() === category.value || category.value === "all") {
+            streamType.data.data.filter(d => {
+                if (d[0].toLowerCase().startsWith(input.value.toLowerCase())) {
+                    let tr = document.createElement("tr");
+                    results?.appendChild(tr);
+                    let td2 = document.createElement("td");
+                    let td1 = document.createElement("td");
+                    let td3 = document.createElement("td");
+                    td1.innerText = streamType.categoryName;
+                    td2.innerText = d[0];
+                    td3.innerText = d[6];
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                }
+            });
+        }
     });
     let trLength = document.getElementsByTagName("tr").length - 1
     if (trLength > 1) {

@@ -29,7 +29,17 @@
     <main>
         <div id="search">
             <label for="searchBox">Search</label>
-            <input type="search" id="searchBox" value="" placeholder="e.g. Alignment, BitRate, Codec, Duration, Encoded_Application, Format...">
+            <select id="category" name="category">
+                <option value="all">(All)</option>
+                <option value="audio">Audio</option>
+                <option value="general">General</option>
+                <option value="image">Image</option>
+                <option value="menu">Menu</option>
+                <option value="other">Other</option>
+                <option value="text">Text</option>
+                <option value="video">Video</option>
+              </select>
+            <input type="search" id="searchBox" value="" placeholder="e.g. BitRate, Codec, Duration, Encoded_Application, Format...">
             <input type="submit" id="submit" value="Search">
             <input type="submit" id="clear" value="Clear">
             <div role="status" id="status"></div>
