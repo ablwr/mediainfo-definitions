@@ -94,7 +94,7 @@ function getParameters() {
                     tr.appendChild(td2);
                     tr.appendChild(td3);
 
-                    if (td3.innerText === "Deprecated, do not use in new projects") {
+                    if (td3.innerText.startsWith("Deprecated")) {
                         td2.style.color = "rgb(105, 29, 29)"
                         td2.style.textDecoration = "line-through"
                         td3.style.color = "rgb(105, 29, 29)"
