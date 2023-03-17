@@ -34,7 +34,9 @@ files.forEach((i) => {
       let categoryName = i.toString().slice(92, -4);
       allParams.push({ categoryName: categoryName, data: data });
       if (window.location.search) {
-        document.getElementById('searchBox').value = window.location.search.slice(8)
+        let params = (new URL(document.location)).searchParams;
+        document.getElementById('searchBox').value = params.get("search");
+        category.value = params.get("category");
         getParameters()
     }
     },
@@ -69,6 +71,7 @@ function clearAll() {
 
 
 function getParameters() {
+    url.searchParams.set('category', category.value);
     url.searchParams.set('search', input.value);
     window.history.replaceState(null, null, url);
 
