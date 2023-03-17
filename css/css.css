@@ -12,7 +12,6 @@ body {
     color: #313b31;
     display: grid;
     align-content: baseline;
-    justify-content: center;
 }
 
 footer {
@@ -47,7 +46,7 @@ tagline>div {
 }
 
 #searchBox {
-    width: 50%;
+    width: 40rem;
 }
 
 #search label {
@@ -106,6 +105,7 @@ tbody>tr {
 tbody>tr>td:first-child {
     width: fit-content;
     overflow-wrap: anywhere;
+    padding-left: 0.5rem;
 }
 
 tbody>tr>td:nth-child(2) {

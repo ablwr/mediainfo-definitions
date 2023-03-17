@@ -143,5 +143,5 @@ function getParameters() {
     if (trLength > 1) {
         thead.style.display = "grid"
     }
-    statusNumber.innerText = `${trLength} contentArea found`;
+    statusNumber.innerText = `${trLength} results found`;
 }
