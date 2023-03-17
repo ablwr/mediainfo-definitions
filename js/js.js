@@ -84,8 +84,8 @@ function getParameters() {
                 if (d[0].toLowerCase().startsWith(input.value.toLowerCase())) {
                     let tr = document.createElement("tr");
                     results?.appendChild(tr);
-                    let td2 = document.createElement("td");
                     let td1 = document.createElement("td");
+                    let td2 = document.createElement("td");
                     let td3 = document.createElement("td");
                     td1.innerText = streamType.categoryName;
                     td2.innerText = d[0];
@@ -93,6 +93,12 @@ function getParameters() {
                     tr.appendChild(td1);
                     tr.appendChild(td2);
                     tr.appendChild(td3);
+
+                    if (td3.innerText === "Deprecated, do not use in new projects") {
+                        td2.style.color = "rgb(105, 29, 29)"
+                        td2.style.textDecoration = "line-through"
+                        td3.style.color = "rgb(105, 29, 29)"
+                    }
                 }
             });
         }
