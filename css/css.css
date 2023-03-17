@@ -47,7 +47,7 @@ tagline>div {
 }
 
 #searchBox {
-    width: 60%;
+    width: 50%;
 }
 
 #search label {
@@ -74,6 +74,11 @@ tagline>div {
 
 #clear {
     background-color: #f0dfec;
+    border: 1px solid black;
+}
+
+#browse {
+    background-color: #f5f1f4;
     border: 1px solid black;
 }
 
@@ -117,4 +122,9 @@ tbody>tr>td:nth-child(3) {
 
 tbody>tr:nth-child(odd) {
     background-color: rgba(0, 100, 0, 0.1);
+}
+
+.clusterize-scroll {
+    max-height: 50vh;
+    overflow: auto;
 }

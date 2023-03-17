@@ -42,23 +42,40 @@
             <input type="search" id="searchBox" value="" placeholder="e.g. BitRate, Codec, Duration, Encoded_Application, Format...">
             <input type="submit" id="submit" value="Search">
             <input type="submit" id="clear" value="Clear">
+            <input type="submit" id="browse" value="Browse all">
             <div role="status" id="status"></div>
         </div>
-        <table>
-            <thead id="head">
-                <tr>
-                    <th>Category</th>
-                    <th>Parameter</th>
-                    <th>Definition</th>
-                </tr>
-            </thead>
-            <tbody id="results">
+        <div>
+        </div>
+        <div id="scrollArea" class="clusterize-scroll">
+            <table>
+                <thead id="head">
+                    <tr>
+                        <th>Category</th>
+                        <th>Parameter</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody class="results" id="contentArea">
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+        <div class="clusterize">
+
+            <div id="scrollArea" class="clusterize-scroll">
+                <table>
+                    <tbody id="contentArea" class="clusterize-content">
+                        <tr class="clusterize-no-data">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <footer>Made with 💙 by <a href="http://ashleyblewer.com">Ashley</a> | <a href="http://github.com/ablwr/mediainfo-definitions">See source on Github</a> | <a href="http://mediaarea.net/MediaInfo">Learn more about MediaInfo</a>
     </footer>
+    <script src="js/clusterize.min.js"></script>
     <script src="js/papaparse.min.js"></script>
     <script src="js/js.js"></script>
 </body>
