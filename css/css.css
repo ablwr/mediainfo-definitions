@@ -85,7 +85,7 @@ thead {
 thead>tr,
 tbody>tr {
     display: grid;
-    grid-template-columns: 8% 30% auto;
+    grid-template-columns: 10% 30% auto;
     border-bottom: 1px solid darkgray;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
