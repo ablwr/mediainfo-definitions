@@ -5,7 +5,7 @@ html {
 
 body {
     min-height: 100vh;
-    padding: 1rem;
+    padding: 2rem;
     font-family: monospace;
     background-color: #d8e8d1;
     background: linear-gradient(217deg, #d8e8d1, #e5ede1, #ebf5eb 70.71%), linear-gradient(127deg, #d8e8d1, #ebf5eb, #e5ede1 70.71%), linear-gradient(336deg, #d8e8d1, #ebf5eb, #e5ede1 70.71%) no-repeat;
@@ -126,5 +126,6 @@ tbody>tr:nth-child(odd) {
 
 .clusterize-scroll {
     max-height: 50vh;
-    overflow: auto;
+    overflow-y: scroll;
+    border: 1px solid black;
 }

@@ -91,12 +91,12 @@ browse?.addEventListener('click', (e) => {
                         tr.appendChild(td1);
                         tr.appendChild(td2);
                         tr.appendChild(td3);
-
                     dataArray.push(`<tr><td>${streamType.categoryName}</td><td>${d[0]}</td><td>${d[6]}</td></tr>`)
                 });
+            });
             
-        });
-
+        thead.style.display = "grid"
+        
         return new Clusterize({
             rows: dataArray,
             scrollId: 'scrollArea',
