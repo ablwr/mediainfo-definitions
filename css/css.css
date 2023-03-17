@@ -125,6 +125,7 @@ tbody>tr:nth-child(odd) {
 }
 
 .clusterize-scroll {
+    display: grid;
     max-height: 50vh;
     overflow-y: scroll;
     border: 1px solid black;
