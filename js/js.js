@@ -16,6 +16,8 @@ const results = document.querySelector("#results")
 const statusNumber = document.querySelector("#status")
 const category = document.querySelector("#category")
 const thead = document.getElementById("head")
+const url = new URL(window.location.href);
+
 
 files.forEach((i) => {
   Papa.parse(i, {
@@ -31,6 +33,10 @@ files.forEach((i) => {
     complete: function (data) {
       let categoryName = i.toString().slice(92, -4);
       allParams.push({ categoryName: categoryName, data: data });
+      if (window.location.search) {
+        document.getElementById('searchBox').value = window.location.search.slice(8)
+        getParameters()
+    }
     },
   });
 });
@@ -42,9 +48,10 @@ input?.addEventListener("keyup", function (e) {
     }
 });
 
+
 submit?.addEventListener('click', (e) => {
-    if (input.value.length > 3) {
-    getParameters();
+    if (input.value.length > 3) {      
+        getParameters();
     }
 })
 
@@ -60,8 +67,13 @@ function clearAll() {
     thead.style.display = "none"
 }
 
+
 function getParameters() {
+    url.searchParams.set('search', input.value);
+    window.history.replaceState(null, null, url);
+
     document.getElementById('results').innerHTML = ""
+
     thead.style.display = "none"
     allParams.forEach(streamType => {
         if (streamType.categoryName.toLowerCase() === category.value || category.value === "all") {
